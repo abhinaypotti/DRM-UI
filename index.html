@@ -1,57 +1,83 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Digital Rights Management</title>
-        <style>
-            #left{
-                margin-top: 180px;
-                margin-left: 250px;
-                float: left;
-                position: relative;
-            }
-            #right{
-                margin-top: 180px;
-                margin-left: 250px;
-                float: left;
-            }
-        
-        
-        
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1 align="center">Digital Rights Management</h1>
-        </header>
-        <div id="left">
-            <h2>Submit image for Secure Share</h2>
-            <br>
-            <h3>STORE</h3>
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                
-                <input type="submit" value="Upload Image" name="submit">
-                <br><br>
-                <button>Store</button>
-            </form>
-            
-        
-        </div>
-        <div id="right">
-            <h2>Submit JSON for retrieval</h2>
-            <br>
-            <h3>RETRIEVE</h3>
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                
-                <input type="submit" value="Upload Image" name="submit">
-                <br><br>
-                <button>Retrieve</button>
-            </form>
-        
-        
-        </div>
-    
-    </body>
+  <head>
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
 
+    <!--CSS-->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Digital Rights Management</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="jumbotron jumbotron-fluid heading">
+        Digital Rights Management
+      </h1>
+    </header>
+    <div class="container">
+      <div class="row" style="margin: 0">
+        <!--Store-->
+
+        <div id="left" class="col col-lg-6">
+          <h2>Submit image for Secure Share</h2>
+          <br />
+          <h3>STORE</h3>
+          <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileToUpload" id="fileToUpload" />
+
+            <input
+              type="submit"
+              value="Upload Image"
+              name="submit"
+              type="button"
+              class="btn btn-dark btn"
+            />
+
+            <br /><br />
+            <button type="button" class="btn btn-dark btn-lg">Store</button>
+          </form>
+        </div>
+
+        <!--Retrieve-->
+        <div id="right" class="col col-lg-6">
+          <h2>Submit JSON for Retrieval</h2>
+          <br />
+          <h3>RETRIEVE</h3>
+          <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileToUpload" id="fileToUpload" />
+
+            <input
+              type="submit"
+              value="Upload Image"
+              name="submit"
+              type="button"
+              class="btn btn-dark btn"
+            />
+            <br /><br />
+            <button type="button" class="btn btn-dark btn-lg">Retrieve</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
